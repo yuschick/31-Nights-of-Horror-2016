@@ -1,0 +1,48 @@
+.arrow {
+    background: #000;
+    height: 40px;
+    padding: $vspace $hspace;
+    position: absolute;
+    top: calc(50vh - 20px);
+    width: 60px;
+    svg {
+        fill: #fff;
+        height: 14px;
+        margin-top: 5px;
+        opacity: .8;
+        stroke: #fff;
+        width: 10px;
+        @include transition(opacity .5s ease);
+    }
+    &.prev {
+        cursor: pointer;
+        left: calc(50vw - #{$container-width/2} - 40px);
+        @include transform(translateX(0));
+        @include transition(transform .5s ease);
+        &:hover {
+            @include transform(translateX(-5px));
+            svg {
+                opacity: 1;
+            }
+        }
+        &.tuck {
+            @include transform(translateX(45px));
+        }
+    }
+    &.next {
+        cursor: pointer;
+        right: calc(50vw - #{$container-width/2} - 40px);
+        @include transform(translateX(0));
+        @include transition(transform .5s ease);
+        text-align: right;
+        &:hover {
+            @include transform(translateX(5px));
+            svg {
+                opacity: 1;
+            }
+        }
+        &.tuck {
+            @include transform(translateX(-45px));
+        }
+    }
+}

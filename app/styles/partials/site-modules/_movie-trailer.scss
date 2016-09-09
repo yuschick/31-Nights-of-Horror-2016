@@ -1,0 +1,54 @@
+.trailer-container {
+    border-bottom: 130px solid $primary;
+    border-left: 130px solid transparent;
+    bottom: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    @include transition(all .5s ease-out);
+    width: 0;
+    &.active {
+        border-bottom: $container-width*2 solid #000;
+        border-left: $container-width*2 solid transparent;
+        @include transition(all .5s ease-out);
+    }
+}
+
+.trailer-content {
+    bottom: $vspace;
+    cursor: pointer;
+    opacity: 1;
+    position: absolute;
+    right: $hspace;
+    z-index: 11;
+    width: 75px;
+    svg {
+        display: block;
+        fill: #fff;
+        height: 25px;
+        margin: 0 auto $vspace/2;
+        width: 25px;
+        @include transform(translate3d(0, 0, 0));
+
+        &.close {
+            background: rgba(0,0,0,.5);
+            float: right;
+            margin: 0 25px 25px 0;
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+    }
+    span {
+        font-size: 12px;
+        color: #fff;
+    }
+}
+.youtube-container {
+    height: $container-height + $card-header-height;
+    left: 0;
+    padding-top: $card-header-height/2;
+    position: absolute;
+    top: 0;
+    width: $container-width;
+    z-index: 10;
+}

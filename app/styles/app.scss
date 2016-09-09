@@ -1,0 +1,21 @@
+// ------ Bourbon CSS ------ //
+@import "partials/plugin-stylesheets/bourbon/bourbon";
+
+// ------ Font & Color Variables and Classes ------ //
+@import "partials/general-setup/fonts";
+@import "partials/general-setup/variables";
+
+// ------ Reset CSS ------ //
+@import "partials/general-setup/reset";
+
+// ------ Site's Fonts, Variables & Plugins ------ //
+// @import "partials/general-setup/animations";
+@import "partials/general-setup/mixins";
+
+// ------ Site's Styles - Base & Print ------ //
+@import "partials/site-modules/title-bar";
+@import "partials/site-modules/text-styles";
+@import "partials/site-modules/wallpaper";
+@import "partials/site-modules/nav-arrows";
+@import "partials/site-modules/movie-card";
+@import "partials/site-modules/movie-trailer";

@@ -1,0 +1,22 @@
+{{#if list}}
+<div class="watch-container">
+    <span>Where to watch:</span>
+    <ul>
+    {{#if list.netflix}}
+    <li><a href="{{list.netflix}}" target="_blank" {{action 'trackClick' movieId 'netflix' preventDefault=false}}><img src="/assets/images/netflix.jpg" alt="Watch {{title}} on Netflix"></a></li>
+    {{/if}}
+
+    {{#if list.amazon}}
+    <li><a href="{{list.amazon}}" target="_blank" {{action 'trackClick' movieId 'amazon' preventDefault=false}}><img src="/assets/images/amazon.png" alt="Watch {{title}} on Amazon"></a></li>
+    {{/if}}
+
+    {{#if list.hulu}}
+    <li><a href="{{list.hulu}}" target="_blank" {{action 'trackClick' movieId 'hulu' preventDefault=false}}><img src="/assets/images/hulu.png" alt="Watch {{title}} on Hulu"></a></li>
+    {{/if}}
+
+    {{#if list.youtube}}
+    <li><a href="{{list.youtube}}" target="_blank" {{action 'trackClick' movieId 'youtube' preventDefault=false}}><img src="/assets/images/youtube.gif" alt="Watch {{title}} on Youtube"></a></li>
+    {{/if}}
+    </ul>
+</div>
+{{/if}}

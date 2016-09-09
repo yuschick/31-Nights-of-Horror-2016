@@ -1,0 +1,24 @@
+// Mixin to deal with Media Queries inside of SCSS, rather than having seperate stylesheets for each
+@mixin bp($point) {
+	@if $point == mobile {
+      @media screen and (min-width: 320px) { @content; }
+    }
+    @if $point == small {
+      @media screen and (min-width: 550px) { @content; }
+    }
+	@if $point == medium {
+		@media screen and (min-width: 670px) { @content; }
+	}
+	@else if $point == large {
+		@media screen and (min-width: 820px) { @content; }
+	}
+	@else if $point == full {
+		@media screen and (min-width: 1060px) { @content; }
+	}
+}
+
+@mixin shadow($size:30, $spread:10) {
+  -webkit-box-shadow: 0px 0px #{$size}px #{$spread}px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px #{$size}px #{$spread}px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px #{$size}px #{$spread}px rgba(0, 0, 0, 0.75);
+}

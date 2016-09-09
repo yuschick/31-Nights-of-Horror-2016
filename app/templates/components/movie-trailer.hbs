@@ -1,0 +1,18 @@
+<div class="trailer-container">
+</div>
+<div class="trailer-content" {{action 'toggleTrailer' movieId}}>
+    {{#unless showTrailer}}
+    <svg viewBox="0 0 44.736 44.737">
+        <g>
+            <path d="M22.368,44.737C10.034,44.737,0,34.702,0,22.369C0,10.035,10.034,0,22.368,0 c12.335,0,22.368,10.035,22.368,22.369C44.736,34.702,34.703,44.737,22.368,44.737z M22.368,4.943 c-9.607,0-17.424,7.816-17.424,17.426c0,9.608,7.817,17.425,17.424,17.425c9.608,0,17.425-7.816,17.425-17.425 C39.792,12.76,31.976,4.943,22.368,4.943z" />
+        </g>
+        <polygon points="15.444,33.827 35.292,22.369 15.444,10.91" />
+    </svg>
+    <span>Watch Trailer</span>
+    {{else}}
+    <svg class="close" viewbox="0 0 20 20">
+        <path d="M5,5 L20,20 M20,5 L5,20" />
+    </svg>
+    {{/unless}}
+</div>
+{{#if showTrailer}} {{component 'youtube-trailer' vid=vid}} {{/if}}

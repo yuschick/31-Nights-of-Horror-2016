@@ -1,0 +1,32 @@
+<div class="card-container">
+    <div class="card-inner-container">
+        <div class="card-header">
+            <span>{{date-text movie.id}}</span>
+            {{#if movie.label}}
+                <div class="card-sub-header">
+                    <span>{{movie.label}}</span>
+                </div>
+            {{/if}}
+        </div>
+        <div class="card-content">
+            <div class="poster">
+                <img src="/assets/images/posters/{{movie.image}}" alt="{{movie.title}}  ({{movie.year}})">
+            </div>
+            <div class="content">
+                <h3>{{movie.title}}</h3>
+                <div class="sub-container">
+                    <div class="year">
+                        <span>{{movie.year}}</span>
+                    </div>
+                    {{component 'imdb-badge' imdb=movie.imdb title=movie.title year=movie.year movieId=movie.id}}
+                </div>
+                <p>{{{prevent-orphan movie.summary}}}</p>
+                {{#if movie.notes}}
+                    <span class="notes">[{{movie.notes}}]</span>
+                {{/if}}
+                {{component 'watch-icons' list=movie.watch title=movie.title movieId=movie.id}}
+            </div>
+        </div>
+        {{component 'movie-trailer' vid=movie.trailer movieId=movie.id}}
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.wallpaper-image {
+    height: 100vh;
+    left: 0;
+    opacity: .1;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    @include filter(blur(7px));
+    @include transition(opacity .15s ease-out);
+
+    &.active {
+    	opacity: .7;
+    }
+    &.trailer {
+        opacity: .3;
+    }
+}

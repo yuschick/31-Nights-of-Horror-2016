@@ -1,0 +1,15 @@
+{{#unless (display-nav-arrows id=id dir='prev')}}
+{{#link-to 'movie' (decrement-num id) invokeAction='fadeWallpaper'}}<div class="arrow prev">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 10">
+        <path d="m5 0l-5 5 5 5 1-1-4-4 4-4" />
+    </svg>
+</div>{{/link-to}}
+{{/unless}}
+
+{{#unless (display-nav-arrows id=id dir='next')}}
+{{#link-to 'movie' (increment-num id) invokeAction='fadeWallpaper'}}<div class="arrow next">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 10">
+        <path d="m1 0l5 5-5 5-1-1 4-4-4-4" />
+    </svg>
+</div>{{/link-to}}
+{{/unless}}

@@ -1,0 +1,105 @@
+.card-container {
+    @include shadow();
+    background: rgba(255, 255, 255, .9);
+    height: $container-height;
+    margin: calc(50vh - #{$container-height / 2}) 0 0 calc(50vw - #{$container-width / 2});
+    overflow: hidden;
+    position: relative;
+    width: $container-width;
+    z-index: 2;
+    .card-inner-container {
+        height: $container-height;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        .card-header {
+            @extend .dosis;
+            background: $primary;
+            line-height: $card-header-height;
+            height: $card-header-height;
+            overflow: hidden;
+            padding: 0 $hspace;
+            position: relative;
+            span {
+                color: #fff;
+            }
+            .card-sub-header {
+                background: #000;
+                border-bottom: $card-header-height solid transparent;
+                border-left: $card-header-height solid $primary;
+                height: $card-header-height;
+                padding: 0 $hspace*2 0 $hspace*5;
+                position: absolute;
+                top: 0;
+                right: -500px;
+                @include transition(right .2s linear);
+                &.active {
+                    right: -15px;
+                    @include transition(right cubic-bezier(0.460,1.240,0.250,1.010) 1.25s);
+                }
+                span {
+                    color: #CCC;
+                }
+            }
+        }
+        .card-content {
+            height: $container-height - $card-header-height;
+            overflow: hidden;
+            padding: $vspace $hspace;
+            .poster {
+                float: left;
+                overflow: hidden;
+                @include calc(width, "100% * .3625"); // .3625 = 261 / 720
+                img {
+                    border: 0;
+                    height: ($container-height - $card-header-height) - ($vspace * 2);
+                    width: auto;
+                }
+            }
+            .content {
+                height: ($container-height - $card-header-height) - ($vspace * 2);
+                overflow: hidden;
+                padding: 0 0 0 $hspace;
+                position: relative;
+                h3 {
+                    @extend .dosis;
+                    font-size: 35px;
+                }
+                .sub-container {
+                    overflow: hidden;
+                }
+                .year {
+                    color: $secondary;
+                    float: left;
+                }
+                .imdb {
+                    float: left;
+                    margin: 0 $hspace;
+                }
+                .watch-container {
+                    bottom: 0;
+                    left: $hspace;
+                    overflow: hidden;
+                    position: absolute;
+                    ul {
+                        margin-top: $vspace/2;
+                        li {
+                            float: left;
+                            height: 50px;
+                            margin: 0 $hspace/3 0 0;
+                            width: 50px;
+                            &:last-child {
+                                margin: 0;
+                            }
+                            img {
+                                width: 100%;
+                                height: 50px;
+                                border: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
