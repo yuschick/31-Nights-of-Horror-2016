@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'horror-calendar',
     environment: environment,
-    baseURL: '/docs/',
+    baseURL: '/31-nights-of-horror-2016/docs/',
     locationType: 'auto',
     firebase: {
       apiKey: "AIzaSyAi-NvxH_EyUhMbzoobbzoakkJxEZzVytk",
