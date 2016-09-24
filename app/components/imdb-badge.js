@@ -8,7 +8,7 @@ export default Ember.Component.extend({
             this.get('store').findRecord('movies', id).then(function(movie) {
             	// console.log(movie.get('tracking.imdb'));
 			  movie.incrementProperty('tracking.imdb');
-			  // movie.save();
+			  movie.save();
 			});
         }
     }
