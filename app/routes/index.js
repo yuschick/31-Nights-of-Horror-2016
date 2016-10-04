@@ -7,7 +7,7 @@ export default Ember.Route.extend({
             date = now.getDate();
 
         if (month === 9 && date !== 1) {
-            this.transitionTo('movie', date - 1);
+            this.transitionTo('movie', date);
         } else {
             this.transitionTo('movie', 1);
         }
