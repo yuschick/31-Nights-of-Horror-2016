@@ -44,7 +44,7 @@ Need recommendations for movies this October? Here is a calendar built in Ember 
 - Baskin
 - The Burning
 - Last Shift
-- Deliver Us from Evil"
+- Deliver Us from Evil
 - Black Christmas
 - The Final Girls
 - The Conjuring 2
