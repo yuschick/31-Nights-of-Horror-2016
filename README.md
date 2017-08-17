@@ -8,9 +8,8 @@ Need recommendations for movies this October? Here is a calendar built in Ember 
 [![31 Nights of Horror 2016](https://github.com/yuschick/31-Nights-of-Horror-2016/raw/master/screenshot.jpg)](http://www.danyuschick.com/31-nights-of-horror/)
 
 ### All Calendars
-[View the 2015 Calendar](http://yuschick.github.io/31-Nights-of-Horror-2015/)  
-[View the 2016 Calendar](http://www.danyuschick.com/31-nights-of-horror/)  
-2017 - Coming 29.9.2017
+[View the 2015 Calendar](http://yuschick.github.io/31-Nights-of-Horror-2015/) - [Repo](https://github.com/yuschick/31-Nights-of-Horror-2015)  
+[View the 2016 Calendar](http://www.danyuschick.com/31-nights-of-horror/) - [Repo](https://github.com/yuschick/31-Nights-of-Horror-2016)  
 
 ### Rules
 - No movies can repeat across calendars (*with the exception of Halloween*)
